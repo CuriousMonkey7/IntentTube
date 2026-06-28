@@ -4,9 +4,6 @@ Open YouTube with intention.
 
 IntentTube is a Chrome extension that asks what mood you are in before YouTube recommendations become usable. Pick Study, Work, Chill, Music, Normal, or a custom mood, and IntentTube locally filters the page so YouTube better matches why you opened it.
 
-## Repo Description
-
-Chrome extension that asks for your YouTube intent before showing recommendations, with Study, Work, Chill, Music, Normal, and custom modes.
 
 ## Why
 
