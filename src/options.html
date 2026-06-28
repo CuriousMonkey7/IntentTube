@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IntentTube Settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div>
+          <p class="eyebrow">IntentTube</p>
+          <h1>Settings</h1>
+        </div>
+        <p class="status" id="save-status">Saved</p>
+      </header>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Setup</h2>
+          <p>Pick defaults for how the chooser behaves.</p>
+        </div>
+        <div class="setup-grid">
+          <label>
+            <span>Default mode</span>
+            <select id="default-mode"></select>
+          </label>
+          <label class="check-row">
+            <span>Show last-mode shortcut on the mood page</span>
+            <input type="checkbox" id="remember-last">
+          </label>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Modes</h2>
+          <p>Customize simple filters for each mode.</p>
+        </div>
+        <div class="tabs" id="mode-tabs"></div>
+        <form class="custom-form" id="custom-form">
+          <input id="custom-name" type="text" maxlength="28" placeholder="Custom mood name" aria-label="Custom mood name">
+          <button type="submit">Add custom mood</button>
+          <button class="danger-button" id="delete-custom" type="button" hidden>Delete selected custom mood</button>
+        </form>
+        <div class="mode-card">
+          <div class="toggles" id="toggles"></div>
+          <div class="lists" id="lists"></div>
+        </div>
+      </section>
+    </main>
+    <script src="shared.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

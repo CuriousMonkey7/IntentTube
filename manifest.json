@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "IntentTube",
+  "description": "Choose your YouTube intent before recommendations take over.",
+  "version": "0.1.0",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "IntentTube",
+    "default_popup": "src/popup.html"
+  },
+  "options_page": "src/options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["src/shared.js", "src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

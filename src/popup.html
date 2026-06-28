@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IntentTube</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header class="top">
+        <div>
+          <p class="eyebrow">Current mode</p>
+          <h1 id="current-mode">Normal</h1>
+        </div>
+        <button class="icon-button" id="open-options" type="button" title="Open settings" aria-label="Open settings"></button>
+      </header>
+
+      <section class="modes" id="mode-list" aria-label="Choose mode"></section>
+
+      <section class="panel">
+        <label class="switch-row">
+          <span>Pause filtering</span>
+          <input type="checkbox" id="paused">
+        </label>
+        <label class="switch-row">
+          <span>Show last-mode shortcut</span>
+          <input type="checkbox" id="remember-last">
+        </label>
+      </section>
+
+      <section class="panel">
+        <p class="panel-title">This mode</p>
+        <div class="toggle-grid" id="mode-toggles"></div>
+      </section>
+    </main>
+    <script src="shared.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

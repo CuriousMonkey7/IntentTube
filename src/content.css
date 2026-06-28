@@ -1,0 +1,208 @@
+html.intenttube-gated ytd-app,
+html.intenttube-gated ytm-app {
+  visibility: hidden !important;
+}
+
+html.intenttube-gated body {
+  overflow: hidden !important;
+}
+
+html.intenttube-gated body > :not(#intenttube-gate) {
+  visibility: hidden !important;
+}
+
+#intenttube-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #1f1f1f;
+  background: rgba(255, 255, 255, 0.97);
+  font-family: Roboto, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  #intenttube-gate {
+    color: #1f1f1f;
+    background: rgba(15, 15, 15, 0.96);
+  }
+}
+
+.intenttube-gate-card {
+  width: min(520px, 100%);
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  color: #1f1f1f;
+  background: #ffffff;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.16);
+  padding: 20px;
+}
+
+.intenttube-gate-title {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.intenttube-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+  gap: 8px;
+}
+
+.intenttube-mode-button,
+.intenttube-chip,
+.intenttube-link-button {
+  border: 1px solid #c9c9c9;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+.intenttube-mode-button {
+  min-height: 72px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  gap: 6px;
+}
+
+.intenttube-mode-button:hover,
+.intenttube-mode-button:focus-visible,
+.intenttube-chip:hover,
+.intenttube-chip:focus-visible,
+.intenttube-link-button:hover,
+.intenttube-link-button:focus-visible {
+  border-color: #0f0f0f;
+  background: #f4f4f4;
+  outline: none;
+}
+
+.intenttube-mode-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.intenttube-mode-button span {
+  font-size: 13px;
+}
+
+.intenttube-gate-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  min-height: 32px;
+}
+
+.intenttube-muted {
+  color: #606060;
+  font-size: 12px;
+}
+
+.intenttube-chip,
+.intenttube-link-button {
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.intenttube-fade-out {
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.intenttube-hidden {
+  display: none !important;
+}
+
+.intenttube-collapsed {
+  display: none !important;
+}
+
+html.intenttube-filter-active ytd-rich-item-renderer:not(.intenttube-checked),
+html.intenttube-filter-active ytd-video-renderer:not(.intenttube-checked),
+html.intenttube-filter-active ytd-compact-video-renderer:not(.intenttube-checked),
+html.intenttube-filter-active ytd-grid-video-renderer:not(.intenttube-checked),
+html.intenttube-filter-active ytd-playlist-video-renderer:not(.intenttube-checked),
+html.intenttube-filter-active ytd-reel-item-renderer:not(.intenttube-checked),
+html.intenttube-filter-active ytm-rich-item-renderer:not(.intenttube-checked),
+html.intenttube-filter-active ytm-video-with-context-renderer:not(.intenttube-checked),
+html.intenttube-filter-active ytm-compact-video-renderer:not(.intenttube-checked),
+html.intenttube-filter-active yt-lockup-view-model:not(.intenttube-checked) {
+  visibility: hidden !important;
+}
+
+.intenttube-placeholder {
+  box-sizing: border-box;
+  margin: 12px 0;
+  padding: 18px;
+  border: 1px solid rgba(127, 127, 127, 0.24);
+  border-radius: 8px;
+  color: var(--yt-spec-text-primary, #0f0f0f);
+  background: var(--yt-spec-base-background, #fff);
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.intenttube-placeholder-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.intenttube-placeholder strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.intenttube-placeholder-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.intenttube-link-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  color: var(--yt-spec-text-primary, #0f0f0f);
+}
+
+.intenttube-status-pill {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483646;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: calc(100vw - 32px);
+  border: 1px solid rgba(127, 127, 127, 0.28);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--yt-spec-text-primary, #0f0f0f);
+  background: var(--yt-spec-base-background, #fff);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  font: 12px Roboto, Arial, sans-serif;
+}
+
+.intenttube-status-pill svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 560px) {
+  .intenttube-mode-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
